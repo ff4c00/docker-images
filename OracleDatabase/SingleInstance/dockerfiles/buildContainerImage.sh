@@ -181,7 +181,7 @@ if [ "${VERSION}" == "12.1.0.2" ] || [ "${VERSION}" == "11.2.0.2" ] || [ "${VERS
 fi;
 
 # Oracle Database image Name
-IMAGE_NAME="oracle/database:${VERSION}-${EDITION}"
+IMAGE_NAME="ff4c00/database:${uname -i}-oracle-${VERSION}-${EDITION}-$(date +%Y%m%d)"
 
 # Go into version folder
 cd "${VERSION}" || {
