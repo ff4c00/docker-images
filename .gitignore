@@ -1,6 +1,6 @@
-**/*.rpm
+# **/*.rpm
 **/*.jar
-**/*.zip
+# **/*.zip
 **/*.tar.gz
 .idea/
 .DS_Store
