@@ -47,7 +47,7 @@ Oracle企业管理器(OEM)是一组基于Web的工具,旨在管理Oracle Corpora
 在每个主要版本中,AL32UTF8均使用较新的Unicode版本进行了更新.<br>
 在Oracle RDBMS 12.1中,其已更新为Unicode 6.1.
 
-默认字符集为: AL32UTF8.
+数据库默认字符集为: AL32UTF8.
 
 ## 11gR2
 
@@ -57,7 +57,7 @@ Oracle企业管理器(OEM)是一组基于Web的工具,旨在管理Oracle Corpora
 
 ### 下载安装包
 
-从[官网](https://www.oracle.com/database/technologies/xe-prior-releases.html)下载安装包至对应目录(参考11.2.0.2目录下的),<br>
+从[官网](https://www.oracle.com/database/technologies/xe-prior-releases.html)下载安装包至对应目录,<br>
 具体安装包名称可以参考目录下Checksum.**文件内列举内容
 
 ### buildContainerImage
@@ -71,7 +71,7 @@ bash buildContainerImage.sh -v 11.2.0.2 -x
 可用参数包括:
 
 参数|含义|必需|示例
--|-|-|
+---|---|---|
 -v|要构建的版本,可用版本参考目录名称|是|-v 11.2.0.2
 -e|基于*企业版*创建镜像|否
 -s|根据*标准版2*创建镜像|否
@@ -117,7 +117,7 @@ docker run -d                   \
 -p 1521:1521 -p 5500:8080       \
 -e ORACLE_SID=ORCL              \
 -e ORACLE_PWD=o39i3U            \
--v /home/ff4c00/db/oracle/11.2.0.2:/u01/app/oracle/oradata \
+-v /home/ff4c00/db/oracle/11.2.0.2/oradata:/u01/app/oracle/oradata \
 ff4c00/database:x86_64-oracle-11.2.0.2-xe-20210206
 ```
 
